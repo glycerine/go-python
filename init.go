@@ -1,14 +1,33 @@
 package python
 
-// #include "go-python.h"
-// char *gopy_ProgName = NULL;
-// char *gopy_PythonHome = NULL;
+/*
+#cgo CFLAGS: -I ${SRCDIR}/python3 -I${SRCDIR}/../gp/install/include/python3.7m
+#cgo LDFLAGS: -L${SRCDIR}/../gp/install/lib ${SRCDIR}/../gp/install/lib/libpython3.7m.a
+#cgo linux LDFLAGS:
+#cgo darwin LDFLAGS: -liconv
+#cgo windows LDFLAGS: -liconv
+#include <stdlib.h>
+#include "go-python.h"
+const wchar_t*gopy_ProgName = NULL;
+const wchar_t*gopy_PythonHome = NULL;
+
+#ifdef __APPLE__
+#  define LIBICONV_PLUG 1
+#endif
+#include <iconv.h>
+#include <wchar.h>
+#include <string.h>
+void putWcharAt(char *buffer, void *wchar, int at) {
+  memcpy(buffer+at, wchar, 4);
+}
+*/
 import "C"
 
 import (
-	"unsafe"
+//"unsafe"
 )
 
+/*
 // Py_SetProgramName should be called before Py_Initialize() is called for
 // the first time, if it is called at all.
 // It tells the interpreter the value of the argv[0] argument to the main()
@@ -20,9 +39,10 @@ import (
 // No code in the Python interpreter will change the contents of this storage.
 func Py_SetProgramName(name string) {
 	C.free(unsafe.Pointer(C.gopy_ProgName))
-	C.gopy_ProgName = C.CString(name)
+	C.gopy_ProgName = *_Ctype_intC.CString(name)
 	C.Py_SetProgramName(C.gopy_ProgName)
 }
+
 
 // Py_GetProgramName returns the program name set with Py_SetProgramName(),
 // or the default.
@@ -36,7 +56,7 @@ func Py_GetProgramName() string {
 // PySys_SetArgv initializes the 'sys.argv' array in python.
 func PySys_SetArgv(argv []string) {
 	argc := C.int(len(argv))
-	cargs := make([]*C.char, len(argv))
+	cargs := make([]*C.int, len(argv))
 	for idx, arg := range argv {
 		cargs[idx] = C.CString(arg)
 		defer C.free(unsafe.Pointer(cargs[idx]))
@@ -58,3 +78,4 @@ func Py_GetPythonHome() string {
 	home := C.Py_GetPythonHome()
 	return C.GoString(home)
 }
+*/

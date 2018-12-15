@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sbinet/go-python"
-	"github.com/sbinet/go-python/runtime"
+	"github.com/glycerine/go-python"
+	"github.com/glycerine/go-python/runtime"
 	"github.com/stretchr/testify/require"
 )
 

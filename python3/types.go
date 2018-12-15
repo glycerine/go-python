@@ -6,7 +6,7 @@ package python3
 import "C"
 
 import (
-	"github.com/sbinet/go-python/runtime"
+	"github.com/glycerine/go-python/runtime"
 )
 
 func (py3Runtime) None() runtime.Object {

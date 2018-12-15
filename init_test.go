@@ -1,10 +1,12 @@
 package python_test
 
+/*
 import (
 	"testing"
 
-	python "github.com/sbinet/go-python"
+	python "github.com/glycerine/go-python"
 )
+
 
 func TestProgramName(t *testing.T) {
 	const want = "foo.exe"
@@ -23,3 +25,4 @@ func TestPythonHome(t *testing.T) {
 		t.Fatalf("got=%q. want=%q", got, want)
 	}
 }
+*/

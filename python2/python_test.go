@@ -1,7 +1,7 @@
 package python2
 
 import (
-	"github.com/sbinet/go-python/pytest"
+	"github.com/glycerine/go-python/pytest"
 	"testing"
 )
 

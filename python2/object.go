@@ -10,7 +10,7 @@ int _gopy2_PyString_CheckExact(PyObject *ptr) { PyString_CheckExact(ptr); }
 import "C"
 
 import (
-	"github.com/sbinet/go-python/runtime"
+	"github.com/glycerine/go-python/runtime"
 )
 
 type Object C.PyObject

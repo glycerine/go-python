@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/sbinet/go-python/python3"
+	"github.com/glycerine/go-python/python3"
 )
 
 var Runtime = python3.Runtime

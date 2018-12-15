@@ -9,7 +9,7 @@ int go_trace_cgo(PyObject *obj, PyFrameObject *frame, int what, PyObject *arg);
 import "C"
 
 import (
-	"github.com/sbinet/go-python/runtime"
+	"github.com/glycerine/go-python/runtime"
 	"unsafe"
 )
 

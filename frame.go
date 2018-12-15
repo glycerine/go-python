@@ -2,7 +2,7 @@ package python
 
 import (
 	"fmt"
-	"github.com/sbinet/go-python/runtime"
+	"github.com/glycerine/go-python/runtime"
 )
 
 type Frame struct {

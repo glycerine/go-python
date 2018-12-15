@@ -6,7 +6,7 @@ import (
 	"os"
 	"plugin"
 
-	"github.com/sbinet/go-python"
+	"github.com/glycerine/go-python"
 )
 
 func loadRuntime(vers string) python.Runtime {

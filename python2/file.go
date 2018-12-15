@@ -15,7 +15,7 @@ PyObject* _gopy2_PyFile_FromFile(int fd, char *name, char *mode) {
 import "C"
 
 import (
-	"github.com/sbinet/go-python/runtime"
+	"github.com/glycerine/go-python/runtime"
 	"os"
 	"unsafe"
 )

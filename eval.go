@@ -1,6 +1,6 @@
 package python
 
-import "github.com/sbinet/go-python/runtime"
+import "github.com/glycerine/go-python/runtime"
 
 type TraceFunc func(frame *Frame, what runtime.TraceType, arg runtime.Object)
 

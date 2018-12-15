@@ -5,7 +5,7 @@ package python2
 import "C"
 
 import (
-	python "github.com/sbinet/go-python/runtime"
+	python "github.com/glycerine/go-python/runtime"
 	"os"
 	"unsafe"
 )
